@@ -150,7 +150,7 @@ public class AlbumLoader extends AbstractLoader {
      */
     public void searchAlbums(final MethodChannel.Result results, final String namedQuery,
                              AlbumSortType sortType) {
-        String[] args = new String[]{namedQuery + "%"};
+        String[] args = new String[]{"%" + namedQuery + "%"};
         createLoadTask(results, MediaStore.Audio.AlbumColumns.ALBUM + " like ?", args,
                 parseSortOrder(sortType), QUERY_TYPE_DEFAULT)
                 .execute();

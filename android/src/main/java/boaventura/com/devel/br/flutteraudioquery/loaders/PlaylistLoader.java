@@ -95,7 +95,7 @@ public class PlaylistLoader extends AbstractLoader {
      */
     public void searchPlaylists(final MethodChannel.Result results, final String namedQuery,
                                 final PlaylistSortType sortType ){
-        String[] args = new String[] { namedQuery + "%"};
+        String[] args = new String[] {"%" + namedQuery + "%"};
         createLoadTask(results,MediaStore.Audio.Playlists.NAME + " like ?", args,
                 parseSortType(sortType), QUERY_TYPE_DEFAULT ).execute();
     }

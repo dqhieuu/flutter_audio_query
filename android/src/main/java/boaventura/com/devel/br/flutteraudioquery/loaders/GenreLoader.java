@@ -80,7 +80,7 @@ public class GenreLoader extends AbstractLoader {
     public void searchGenres(final MethodChannel.Result results, final String namedQuery,
                             final GenreSortType sortType ){
 
-        String[] args = new String[]{ namedQuery + "%"};
+        String[] args = new String[]{"%" + namedQuery + "%"};
         createLoadTask(results, GENRE_PROJECTION[0] + " like ?", args,
                 parseSortOrder(sortType), QUERY_TYPE_DEFAULT).execute();
     }

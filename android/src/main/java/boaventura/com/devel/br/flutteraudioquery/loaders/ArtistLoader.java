@@ -150,7 +150,7 @@ public class ArtistLoader extends AbstractLoader {
     public void searchArtistsByName(final MethodChannel.Result result,
                              final String nameQuery, ArtistSortType sortType ){
 
-        String args = /*"%" +*/ nameQuery + "%";
+        String args = "%" + nameQuery + "%";
         createLoadTask(result, MediaStore.Audio.Artists.ARTIST +
                         " like ?", new String[]{args},
                 parseSortOrder(sortType), QUERY_TYPE_DEFAULT).execute();
