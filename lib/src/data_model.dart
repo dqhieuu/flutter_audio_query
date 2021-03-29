@@ -13,6 +13,9 @@ abstract class DataModel {
   /// The data model id
   String get id => _data[ID] ?? "";
 
+  /// Added setter
+  set id(String value) => _data[ID] = value;
+
   @override
   String toString() {
     return '$runtimeType($_data)';
