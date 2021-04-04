@@ -88,62 +88,62 @@ class SongInfo extends DataModel {
       : super._({});
 
   /// Returns the album id which this song appears.
-  String albumId;
+  String? albumId;
 
   /// Returns the artist id who create this audio file.
-  String artistId;
+  String? artistId;
 
   /// Returns the artist name who create this audio file.
-  String artist;
+  String? artist;
 
   /// Returns the album title which this song appears.
-  String album;
+  String? album;
 
   // Returns the genre name which this song belongs.
   //String genre ;
 
   /// Returns the song title.
-  String title;
+  String? title;
 
   /// Returns the song display name. Display name string
   /// is a combination of [Track number] + [Song title] [File extension]
   /// Something like 1 My pretty song.mp3
-  String displayName;
+  String? displayName;
 
   /// Returns the composer name of this song.
-  String composer;
+  String? composer;
 
   /// Returns the year of this song was created.
-  String year;
+  String? year;
 
   /// Returns the album track number if this song has one.
-  String track;
+  String? track;
 
   /// Returns a String with a number in milliseconds (ms) that is the duration of this audio file.
-  String duration;
+  String? duration;
 
   /// Returns in ms, playback position when this song was stopped.
   /// from the last time.
-  String bookmark;
+  String? bookmark;
 
   /// Returns a String with a file path to audio data file
-  String filePath;
+  String? filePath;
 
-  String uri;
+  String? uri;
 
   /// Returns a String with the size, in bytes, of this audio file.
-  String fileSize;
+  String? fileSize;
 
   ///Returns album artwork path which current song appears.
-  String albumArtwork;
+  String? albumArtwork;
 
-  bool isMusic;
+  bool? isMusic;
 
-  bool isPodcast;
+  bool? isPodcast;
 
-  bool isRingtone;
+  bool? isRingtone;
 
-  bool isAlarm;
+  bool? isAlarm;
 
-  bool isNotification;
+  bool? isNotification;
 }

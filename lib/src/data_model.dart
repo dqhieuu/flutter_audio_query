@@ -14,7 +14,7 @@ abstract class DataModel {
   String get id => _data![ID] ?? "";
 
   /// Added setter
-  set id(String value) => _data[ID] = value;
+  set id(String value) => (_data ?? {})[ID] = value;
 
   @override
   String toString() {
